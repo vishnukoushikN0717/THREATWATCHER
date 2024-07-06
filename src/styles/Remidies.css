@@ -1,0 +1,20 @@
+.dashboard {
+    display: flex;
+    padding: 1rem;
+}
+
+.description-container {
+    flex: 1;
+    padding: 1rem;
+}
+
+.carousel-container {
+    flex: 1;
+    padding: 1rem;
+}
+
+.carousel .slide img {
+    width: 100%;
+    height: auto;
+
+}

@@ -1,0 +1,231 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #000000, #434343);
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.dashboard-container {
+    display: flex;
+    background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin: 20px;
+}
+
+.incidents-list {
+    flex: 1;
+    padding-right: 20px;
+    max-width: 1200px;
+    margin: 10px;
+    padding: 20px;
+    background: linear-gradient(135deg, #4d4d4d, #6b6b6b);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.incidents-list::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(200%);
+    }
+}
+
+.incidents-list h2 {
+    font-size: 24px;
+    color: #f1ebeb;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: bold;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.incidents-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.description {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    border-bottom: 1px solid #238fbd;
+    padding-bottom: 5px;
+    background-color: #ffa500;
+    border-radius: 3px;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.heading-2 {
+    font-family: "Roboto";
+    color: #f8f8f8;
+    text-align: left;
+    text-decoration: dotted;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: slideInLeft 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.about-images-1 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.about-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+    transform: scale(1.1);
+}
+
+.about-images-1 p {
+    text-align: left;
+    font-family: "Roboto";
+    margin-left: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: #bbb;
+    animation: fadeInRight 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.app-info {
+    flex: 1;
+    padding-left: 20px;
+    border-left: 1px solid #555;
+    margin: 10px;
+}
+
+.about-section {
+    margin-top: 10px;
+    background: linear-gradient(135deg, #2c2c2c, #4d4d4d);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.app-info h2 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+.app-info p {
+    font-size: 16px;
+    color: #bbb;
+    line-height: 1.5;
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .incidents-list,
+    .app-info {
+        padding: 0;
+        border: none;
+    }
+
+    .app-info {
+        margin-top: 20px;
+    }
+}
+
+/* Other styles remain the same */
+
+.button {
+    background: linear-gradient(135deg, #c58679, #453931);
+    /* Gradient background */
+    color: #fff;
+    /* Text color */
+    font-weight: bold;
+    /* Bold text */
+    border: none;
+    border-radius: 50px;
+    /* Rounded corners */
+    padding: 10px 20px;
+    /* Padding */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Box shadow */
+    transition: all 0.1s ease;
+    /* Smooth transition */
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    /* Move up on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    /* Increase shadow on hover */
+}
+
+.button:focus {
+    outline: none;
+    /* Remove default outline */
+}
