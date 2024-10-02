@@ -81,13 +81,13 @@
 
 .incident-report input:focus,
 .incident-report select:focus {
-    border-color: #ff7e5f;
+    border-color: #cecac9;
     outline: none;
 }
 
 .incident-report .submit-button {
     padding: 10px 20px;
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    background: linear-gradient(135deg, #575251, #feb47b);
     color: white;
     font-weight: bold;
     border: none;
@@ -100,12 +100,12 @@
 
 .incident-report .submit-button:hover {
     transform: scale(1.05);
-    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    background: linear-gradient(135deg, #aba49e, #b8664f);
 }
 
 .incident-report .submit-button:active {
     transform: scale(1);
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    background: linear-gradient(135deg, #48271f, #dcd8d4);
 }
 
 .incident-report .map-container {

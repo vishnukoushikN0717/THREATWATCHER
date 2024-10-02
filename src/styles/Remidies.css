@@ -1,20 +1,106 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef;
+}
+
 .dashboard {
     display: flex;
-    padding: 1rem;
+    flex-direction: row;
+    /* Change to row to display items side by side */
+    align-items: flex-start;
+    /* Align items to the start of the container */
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #2c2c2c, #4d4d4d);
+    min-height: 100vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .description-container {
     flex: 1;
-    padding: 1rem;
+    /* Allow the container to take available space */
+    margin-right: 1rem;
+    /* Add some space between the description and the carousel */
+    background-color: #ffffff;
+    padding: 2rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeInText 1.5s ease;
+    transition: opacity 0.5s ease;
+}
+
+.description-container h3 {
+    margin-top: 0;
+    font-size: 2em;
+    color: #333;
+    animation: fadeInText 1.5s ease;
+}
+
+.description-container p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    animation: fadeInText 1.5s ease;
 }
 
 .carousel-container {
     flex: 1;
-    padding: 1rem;
+    /* Allow the container to take available space */
+    max-width: 800px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .carousel .slide img {
     width: 100%;
-    height: auto;
+    height: 400px;
+    /* Set a fixed height */
+    object-fit: cover;
+    /* Ensures images cover the area without distortion */
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
 
+.carousel .slide img:hover {
+    transform: scale(1.05);
+}
+
+.carousel .legend {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    text-align: center;
+    animation: fadeInText 1.5s ease;
+}
+
+.carousel .control-arrow {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.carousel .control-arrow:before {
+    font-size: 2em;
+    color: #fff;
+}
+
+.carousel .control-arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
 }

@@ -1,0 +1,123 @@
+/* prediction.css */
+
+.prediction-container {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #2c2c2c, #4d4d4d);
+    padding: 20px;
+    color: white
+}
+
+.prediction-container h2 {
+    color: #f4f1f1;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.prediction-container label {
+    font-size: 1.2em;
+    color: #e5e0e0;
+}
+
+.prediction-container select,
+.prediction-container input {
+    font-size: 1em;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+.prediction-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #020304;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: bounceIn 1s ease;
+}
+
+.prediction-container button:hover {
+    background-color: #a9aeb3;
+}
+
+.prediction-container h3 {
+    color: #c65f5f;
+    text-align: center;
+    margin-top: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.prediction-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.prediction-container li {
+    background-color: #f9f4f4;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease;
+}
+
+.prediction-container li a {
+    color: #db368e;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.prediction-container li a:hover {
+    text-decoration: underline;
+}
+
+.prediction-container li p {
+    color: #555;
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}

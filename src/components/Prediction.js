@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/prediction.css';
 
 const Prediction = () => {
     const [disaster, setDisaster] = useState('');
@@ -35,7 +36,7 @@ const Prediction = () => {
     };
 
     return (
-        <div>
+        <div className="prediction-container">
             <h2>Prediction</h2>
             <div>
                 <label>Disaster:</label>
